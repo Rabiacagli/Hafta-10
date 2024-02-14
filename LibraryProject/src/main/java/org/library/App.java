@@ -4,8 +4,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import org.library.Book;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +14,7 @@ public class App {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Library");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
+        List<Book> bookList = new ArrayList<>();
 
 
       /*  Author author = new Author();
@@ -131,8 +132,8 @@ public class App {
 
 
         transaction.begin();
-     //   entityManager.persist(b1);
-       // entityManager.persist(b2);
+        //   entityManager.persist(b1);
+        // entityManager.persist(b2);
         //entityManager.persist(b3);
         transaction.commit();
     }
